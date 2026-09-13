@@ -1,0 +1,847 @@
+/* =====================================================
+   VendorCat - REKAP PER CABANG
+   Scoped stylesheet - aman berdampingan dengan admin.css
+===================================================== */
+.recaps-page {
+    background: #f5f7fb;
+    color: #111827
+}
+
+.recaps-page .page-container {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 28px 32px 40px !important;
+    box-sizing: border-box
+}
+
+.recaps-page .page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 20px;
+    margin-bottom: 24px
+}
+
+.recaps-page .breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #8a96a8;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 8px
+}
+
+.recaps-page .breadcrumb i {
+    font-size: 10px
+}
+
+.recaps-page .breadcrumb strong {
+    color: #4b5563
+}
+
+.recaps-page .page-header h1 {
+    color: #102238;
+    font-size: 27px;
+    font-weight: 800;
+    margin: 0 0 5px
+}
+
+.recaps-page .page-header p {
+    margin: 0;
+    color: #7b8797;
+    font-size: 14px
+}
+
+.recaps-page .header-actions {
+    display: flex;
+    gap: 10px
+}
+
+.recaps-page .btn-primary,
+.recaps-page .btn-secondary,
+.recaps-page .btn-filter {
+    border-radius: 9px;
+    padding: 11px 16px;
+    font: 700 13px Inter, sans-serif;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-decoration: none;
+    white-space: nowrap
+}
+
+.recaps-page .btn-primary {
+    border: 1px solid #0c1a2d;
+    background: #0c1a2d;
+    color: #fff
+}
+
+.recaps-page .btn-secondary {
+    background: #fff;
+    color: #34445a;
+    border: 1px solid #dce3eb
+}
+
+.recaps-page .btn-filter {
+    height: 42px;
+    border: 0;
+    background: #0c1a2d;
+    color: #fff
+}
+
+.recaps-page .recap-filter {
+    display: grid;
+    grid-template-columns: 1.45fr 1.2fr 1fr 1fr auto;
+    gap: 14px;
+    align-items: end;
+    background: #fff;
+    border: 1px solid #e4e9ef;
+    border-radius: 14px;
+    padding: 18px;
+    margin-bottom: 20px
+}
+
+.recaps-page .filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 7px
+}
+
+.recaps-page .filter-group label {
+    color: #536276;
+    font-size: 12px;
+    font-weight: 700
+}
+
+.recaps-page .filter-group select,
+.recaps-page .filter-group input {
+    width: 100%;
+    height: 42px;
+    padding: 0 12px;
+    border: 1px solid #dce3eb;
+    border-radius: 8px;
+    background: #fff;
+    color: #25364c;
+    outline: none;
+    font: 13px Inter, sans-serif;
+    box-sizing: border-box
+}
+
+.recaps-page .search-input {
+    position: relative
+}
+
+.recaps-page .search-input i {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #94a3b8;
+    font-size: 15px
+}
+
+.recaps-page .search-input input {
+    padding-left: 35px
+}
+
+.recaps-page .filter-group select:focus,
+.recaps-page .filter-group input:focus {
+    border-color: #94a3b8;
+    box-shadow: 0 0 0 3px rgba(15, 23, 42, .05)
+}
+
+.recaps-page .summary-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+    margin-bottom: 16px
+}
+
+.recaps-page .summary-card {
+    background: #fff;
+    border: 1px solid #e4e9ef;
+    border-radius: 14px;
+    padding: 18px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-width: 0
+}
+
+.recaps-page .summary-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 11px;
+    display: grid;
+    place-items: center;
+    background: #eef2f7;
+    color: #22354e;
+    font-size: 20px;
+    flex: 0 0 45px
+}
+
+.recaps-page .summary-icon.blue {
+    background: #eff6ff;
+    color: #2563eb
+}
+
+.recaps-page .summary-icon.green {
+    background: #ecfdf5;
+    color: #16a34a
+}
+
+.recaps-page .summary-icon.purple {
+    background: #f5f3ff;
+    color: #7c3aed
+}
+
+.recaps-page .summary-icon.orange {
+    background: #fff7ed;
+    color: #ea580c
+}
+
+.recaps-page .summary-card span {
+    display: block;
+    color: #7b8797;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 4px
+}
+
+.recaps-page .summary-card strong {
+    display: block;
+    color: #102238;
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 800
+}
+
+.recaps-page .summary-card small {
+    display: block;
+    color: #94a3b8;
+    font-size: 11px;
+    margin-top: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.recaps-page .summary-mini-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+    margin-bottom: 20px
+}
+
+.recaps-page .mini-card {
+    background: #fff;
+    border: 1px solid #e4e9ef;
+    border-radius: 14px;
+    padding: 16px 18px
+}
+
+.recaps-page .mini-card span {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #66758a;
+    font-size: 12px;
+    font-weight: 700
+}
+
+.recaps-page .mini-card span i {
+    color: #64748b
+}
+
+.recaps-page .mini-card strong {
+    display: block;
+    color: #102238;
+    font-size: 22px;
+    line-height: 1.15;
+    margin-top: 7px;
+    font-weight: 800
+}
+
+.recaps-page .mini-card small {
+    display: block;
+    color: #94a3b8;
+    font-size: 11px;
+    margin-top: 4px
+}
+
+.recaps-page .dashboard-grid {
+    display: grid;
+    grid-template-columns: 1.55fr 1fr;
+    gap: 16px;
+    margin-bottom: 20px
+}
+
+.recaps-page .report-card {
+    background: #fff;
+    border: 1px solid #e4e9ef;
+    border-radius: 14px;
+    overflow: hidden
+}
+
+.recaps-page .card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 18px 20px;
+    border-bottom: 1px solid #edf1f5
+}
+
+.recaps-page .card-header h2 {
+    margin: 0;
+    color: #18283d;
+    font-size: 15px;
+    font-weight: 800
+}
+
+.recaps-page .card-header p {
+    margin: 5px 0 0;
+    color: #8a96a8;
+    font-size: 12px
+}
+
+.recaps-page .performance-list {
+    padding: 20px
+}
+
+.recaps-page .performance-row {
+    padding: 0 0 17px;
+    margin-bottom: 17px;
+    border-bottom: 1px solid #eff2f5
+}
+
+.recaps-page .performance-row:last-child {
+    border-bottom: 0;
+    margin-bottom: 0;
+    padding-bottom: 0
+}
+
+.recaps-page .performance-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px
+}
+
+.recaps-page .performance-top strong {
+    color: #34445a;
+    font-size: 12px;
+    font-weight: 700
+}
+
+.recaps-page .performance-top span {
+    color: #102238;
+    font-size: 12px;
+    font-weight: 800
+}
+
+.recaps-page .progress {
+    height: 9px;
+    background: #edf2f7;
+    border-radius: 999px;
+    overflow: hidden
+}
+
+.recaps-page .progress i {
+    display: block;
+    height: 100%;
+    border-radius: 999px;
+    background: #1f334d
+}
+
+.recaps-page .performance-row small {
+    display: block;
+    margin-top: 6px;
+    color: #9aa5b4;
+    font-size: 10px
+}
+
+.recaps-page .snapshot-list {
+    padding: 8px 20px 12px
+}
+
+.recaps-page .snapshot-list>div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 12px 0;
+    border-bottom: 1px solid #eff2f5
+}
+
+.recaps-page .snapshot-list>div:last-child {
+    border-bottom: 0
+}
+
+.recaps-page .snapshot-list span {
+    font-size: 12px;
+    color: #69778a
+}
+
+.recaps-page .snapshot-list strong {
+    font-size: 13px;
+    color: #102238
+}
+
+.recaps-page .snapshot-note {
+    display: flex;
+    gap: 9px;
+    margin: 0 20px 18px;
+    padding: 11px 12px;
+    border: 1px solid #e6ebf1;
+    background: #f8fafc;
+    border-radius: 9px;
+    color: #6f7d90;
+    font-size: 11px;
+    line-height: 1.45
+}
+
+.recaps-page .snapshot-note i {
+    color: #64748b;
+    margin-top: 1px
+}
+
+.recaps-page .table-card {
+    margin-bottom: 20px
+}
+
+.recaps-page .table-actions {
+    display: flex;
+    gap: 8px
+}
+
+.recaps-page .table-actions a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    height: 36px;
+    padding: 0 11px;
+    border: 1px solid #dce3eb;
+    border-radius: 8px;
+    background: #fff;
+    color: #42526a;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700
+}
+
+.recaps-page .table-actions a:hover {
+    background: #f8fafc
+}
+
+.recaps-page .table-responsive {
+    width: 100%;
+    overflow-x: auto
+}
+
+.recaps-page table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 1220px
+}
+
+.recaps-page thead th {
+    background: #fbfcfd;
+    color: #7a8798;
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    text-align: left;
+    padding: 12px 14px;
+    border-bottom: 1px solid #e8edf2;
+    white-space: nowrap
+}
+
+.recaps-page tbody td {
+    padding: 13px 14px;
+    border-bottom: 1px solid #eef2f5;
+    color: #4b5b70;
+    font-size: 12px;
+    vertical-align: middle;
+    white-space: nowrap
+}
+
+.recaps-page tbody tr:hover {
+    background: #fcfdff
+}
+
+.recaps-page tbody td strong {
+    display: block;
+    color: #24364d;
+    font-weight: 800
+}
+
+.recaps-page tbody td small {
+    display: block;
+    color: #99a5b4;
+    font-size: 10px;
+    margin-top: 3px
+}
+
+.recaps-page .status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 68px;
+    padding: 5px 8px;
+    border-radius: 999px;
+    font-size: 10px;
+    font-weight: 800
+}
+
+.recaps-page .status.success {
+    background: #ecfdf3;
+    color: #15803d
+}
+
+.recaps-page .status.warning {
+    background: #fff7ed;
+    color: #c2410c
+}
+
+.recaps-page .status.danger {
+    background: #fef2f2;
+    color: #b91c1c
+}
+
+.recaps-page .transfer-count {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #a16207;
+    font-size: 10px;
+    font-weight: 800
+}
+
+.recaps-page .transfer-count.incoming {
+    color: #15803d;
+    margin-top: 5px
+}
+
+.recaps-page .transfer-count i {
+    font-size: 11px
+}
+
+.recaps-page .pagination {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 15px 18px;
+    color: #8793a3;
+    font-size: 11px
+}
+
+.recaps-page .pagination-controls {
+    display: flex;
+    align-items: center;
+    gap: 4px
+}
+
+.recaps-page .pagination-controls a {
+    min-width: 31px;
+    height: 31px;
+    padding: 0 8px;
+    border-radius: 7px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #536276;
+    border: 1px solid #dfe5ec;
+    background: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    box-sizing: border-box
+}
+
+.recaps-page .pagination-controls a.active {
+    background: #102238;
+    color: #fff;
+    border-color: #102238
+}
+
+.recaps-page .pagination-controls a.disabled {
+    pointer-events: none;
+    opacity: .4
+}
+
+.recaps-page .pagination-controls .ellipsis {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 22px;
+    color: #94a3b8;
+    font-weight: 700
+}
+
+.recaps-page .empty-state {
+    display: flex;
+    min-height: 150px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    color: #94a3b8;
+    text-align: center;
+    padding: 25px
+}
+
+.recaps-page .empty-state i {
+    font-size: 30px;
+    margin-bottom: 3px
+}
+
+.recaps-page .empty-state strong {
+    color: #64748b;
+    font-size: 13px
+}
+
+.recaps-page .empty-state span {
+    font-size: 11px
+}
+
+.recaps-page .table-empty {
+    min-height: 180px
+}
+
+@media(max-width:1180px) {
+
+    .recaps-page .summary-grid,
+    .recaps-page .summary-mini-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr))
+    }
+
+    .recaps-page .recap-filter {
+        grid-template-columns: 1fr 1fr
+    }
+
+    .recaps-page .btn-filter {
+        width: 100%
+    }
+
+    .recaps-page .dashboard-grid {
+        grid-template-columns: 1fr
+    }
+}
+
+@media(max-width:900px) {
+    .recaps-page .page-container {
+        padding: 22px 24px 32px !important
+    }
+}
+
+@media(max-width:650px) {
+    .recaps-page .page-container {
+        padding: 18px 16px 28px !important
+    }
+
+    .recaps-page .page-header {
+        align-items: flex-start;
+        flex-direction: column
+    }
+
+    .recaps-page .header-actions {
+        width: 100%
+    }
+
+    .recaps-page .header-actions a {
+        flex: 1
+    }
+
+    .recaps-page .recap-filter,
+    .recaps-page .summary-grid,
+    .recaps-page .summary-mini-grid {
+        grid-template-columns: 1fr
+    }
+
+    .recaps-page .card-header {
+        flex-direction: column;
+        align-items: flex-start
+    }
+
+    .recaps-page .table-actions {
+        width: 100%
+    }
+
+    .recaps-page .table-actions a {
+        flex: 1
+    }
+
+    .recaps-page .pagination {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px
+    }
+}
+
+@media print {
+    @page {
+        size: A4 landscape;
+        margin: 10mm
+    }
+
+    .recaps-page {
+        background: #fff !important
+    }
+
+    .recaps-page .sidebar,
+    .recaps-page .header-actions,
+    .recaps-page .recap-filter,
+    .recaps-page .table-actions,
+    .recaps-page .pagination {
+        display: none !important
+    }
+
+    .recaps-page .main {
+        margin-left: 0 !important;
+        width: 100% !important
+    }
+
+    .recaps-page .page-container {
+        max-width: none;
+        padding: 0 !important
+    }
+
+    .recaps-page .page-header {
+        margin-bottom: 14px
+    }
+
+    .recaps-page .page-header h1 {
+        font-size: 20px
+    }
+
+    .recaps-page .page-header p {
+        font-size: 10px
+    }
+
+    .recaps-page .summary-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 8px;
+        margin-bottom: 10px
+    }
+
+    .recaps-page .summary-card {
+        padding: 10px
+    }
+
+    .recaps-page .summary-icon {
+        width: 30px;
+        height: 30px;
+        flex-basis: 30px;
+        font-size: 14px
+    }
+
+    .recaps-page .summary-card strong {
+        font-size: 13px
+    }
+
+    .recaps-page .summary-card small {
+        font-size: 8px
+    }
+
+    .recaps-page .summary-mini-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 8px;
+        margin-bottom: 10px
+    }
+
+    .recaps-page .mini-card {
+        padding: 9px 10px
+    }
+
+    .recaps-page .mini-card strong {
+        font-size: 14px
+    }
+
+    .recaps-page .dashboard-grid {
+        grid-template-columns: 1.4fr 1fr;
+        gap: 8px;
+        margin-bottom: 10px
+    }
+
+    .recaps-page .card-header {
+        padding: 10px 12px
+    }
+
+    .recaps-page .card-header h2 {
+        font-size: 11px
+    }
+
+    .recaps-page .card-header p {
+        font-size: 8px
+    }
+
+    .recaps-page .performance-list {
+        padding: 10px 12px
+    }
+
+    .recaps-page .performance-row {
+        padding-bottom: 8px;
+        margin-bottom: 8px
+    }
+
+    .recaps-page .performance-top strong,
+    .recaps-page .performance-top span {
+        font-size: 8px
+    }
+
+    .recaps-page .performance-row small {
+        font-size: 7px
+    }
+
+    .recaps-page .snapshot-list {
+        padding: 0 12px 6px
+    }
+
+    .recaps-page .snapshot-list>div {
+        padding: 6px 0
+    }
+
+    .recaps-page .snapshot-list span,
+    .recaps-page .snapshot-list strong {
+        font-size: 8px
+    }
+
+    .recaps-page .snapshot-note {
+        font-size: 7px;
+        margin: 0 12px 10px;
+        padding: 7px
+    }
+
+    .recaps-page table {
+        min-width: 0
+    }
+
+    .recaps-page thead th {
+        font-size: 7px;
+        padding: 7px 6px
+    }
+
+    .recaps-page tbody td {
+        font-size: 7px;
+        padding: 7px 6px
+    }
+
+    .recaps-page tbody td small {
+        font-size: 6px
+    }
+
+    .recaps-page .status {
+        font-size: 6px;
+        min-width: 45px;
+        padding: 3px 5px
+    }
+}
